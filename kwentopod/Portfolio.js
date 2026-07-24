@@ -34,7 +34,7 @@ export default function Portfolio() {
       }}>
         <span style={{ fontSize: '1.1rem', flexShrink: 0 }}>🔒</span>
         <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.6 }}>
-          <strong style={{ color: 'var(--white)' }}>Client Confidentiality Notice:</strong> Due to client confidentiality, some portfolio samples can&apos;t be displayed publicly. I&apos;d be happy to share additional work during a{' '}
+          <strong style={{ color: 'var(--white)' }}>Client Confidentiality Notice:</strong> Due to client confidentiality, some portfolio samples cannot be displayed publicly. I would be happy to share additional work during a{' '}
           <a href="mailto:hello@kwentopod.com" style={{ color: 'var(--accent)', textDecoration: 'none' }}>Zoom call</a>.
         </p>
       </div>
@@ -53,7 +53,13 @@ export default function Portfolio() {
           {longformVideos.map((v) => (
             <div key={v.id} className="videoCard">
               <div className="videoEmbed">
-                <iframe src={`https://www.youtube.com/embed/${v.id}`} title={v.title} allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${v.id}?rel=0&modestbranding=1`}
+                  title={v.title}
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
               </div>
               <div className="videoInfo">
                 <div className="videoTypeBadge badgeLong">Long-form · Full Episode</div>
@@ -70,7 +76,13 @@ export default function Portfolio() {
           {shortformVideos.map((v) => (
             <div key={v.id} className="reelCard">
               <div className="reelEmbed">
-                <iframe src={`https://www.youtube.com/embed/${v.id}`} title={v.title} allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${v.id}?rel=0&modestbranding=1`}
+                  title={v.title}
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
               </div>
               <div className="reelInfo">
                 <div className="videoTypeBadge badgeShort">Short-form · {v.duration}</div>
