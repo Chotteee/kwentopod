@@ -9,102 +9,7 @@ export default function Home() {
       <Nav />
       <Hero />
 
-      {/* SERVICES */}
-      <section id="services" className="section sectionGray">
-        <div className="sectionTag">What&apos;s Included</div>
-        <h2 className="sectionTitle">Every service you need<br />in one package</h2>
-        <p className="sectionSub">From raw recording to polished, publish-ready content — we handle every step of the post-production pipeline.</p>
-        <div className="servicesGrid">
-          {[
-            { icon: '🎬', title: 'Multi-Camera Editing', desc: 'Seamless cuts between multiple camera angles, synced and color-graded for a professional broadcast look.', tag: 'Video', bg: 'rgba(124,58,237,0.15)' },
-            { icon: '🎙', title: 'Audio Editing & Cleaning', desc: 'Noise removal, EQ, compression, and de-essing. Basic audio balancing between hosts and guests.', tag: 'Audio', bg: 'rgba(185,127,255,0.12)' },
-            { icon: '✂️', title: 'Smart Cutting', desc: 'Removal of filler words, long pauses, "ums", "uhs", and unnecessary tangents — keeping your show tight and engaging.', tag: 'Efficiency', bg: 'rgba(124,58,237,0.15)' },
-            { icon: '🖼', title: 'AI-Powered Thumbnails', desc: 'Eye-catching thumbnails generated and refined using AI tools, optimized for click-through rate on YouTube.', tag: 'AI', bg: 'rgba(185,127,255,0.12)' },
-            { icon: '📅', title: 'YouTube Scheduling', desc: 'We upload and schedule your video on YouTube with optimized titles, descriptions, tags, and chapters.', tag: 'Distribution', bg: 'rgba(124,58,237,0.15)' },
-            { icon: '🎨', title: 'Custom Templates & Lower Thirds', desc: "Branded animated lower thirds and intro/outro templates tailored to your show's identity.", tag: 'Branding', bg: 'rgba(185,127,255,0.12)' },
-          ].map((s) => (
-            <div key={s.title} className="serviceCard">
-              <div className="serviceIcon" style={{ background: s.bg }}>{s.icon}</div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
-              <span className="serviceTag">{s.tag}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* PLATFORMS */}
-      <section id="platforms" className="section" style={{ background: 'var(--gray)' }}>
-        <div className="sectionTag">Distribution</div>
-        <h2 className="sectionTitle">Optimized for every platform</h2>
-        <p className="sectionSub">One recording, four fully-optimized cuts. Each platform gets the right format, aspect ratio, and length.</p>
-        <div className="platformGrid">
-          {[
-            { icon: '📺', name: 'YouTube', desc: 'Full-length 16:9 export, chapters, cards, end screens, and SEO-optimized scheduling.', spec: '16:9 · Long-form', bg: 'rgba(255,0,0,0.1)' },
-            { icon: '📸', name: 'Instagram', desc: 'Reels and feed-optimized clips with captions in 9:16 vertical format for maximum reach.', spec: '9:16 · Reels', bg: 'rgba(225,48,108,0.1)' },
-            { icon: '💼', name: 'LinkedIn', desc: 'Professional square or vertical clips with topic-driven captions suited for B2B audiences.', spec: '1:1 or 9:16 · Pro', bg: 'rgba(10,102,194,0.1)' },
-            { icon: '👥', name: 'Facebook', desc: 'Horizontal or square clips formatted for Facebook Watch and feed with auto-captions.', spec: '16:9 or 1:1 · Feed', bg: 'rgba(24,119,242,0.1)' },
-          ].map((p) => (
-            <div key={p.name} className="platformCard">
-              <div className="platformIconWrap" style={{ background: p.bg }}>{p.icon}</div>
-              <h3>{p.name}</h3>
-              <p>{p.desc}</p>
-              <span className="platformSpec">{p.spec}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* REELS */}
-      <section id="reels" className="section">
-        <div className="reelsSection">
-          <div>
-            <div className="sectionTag">Short-Form Content</div>
-            <h2 className="sectionTitle">8 Short-form Clips<br />every month</h2>
-            <p className="sectionSub">We find the most engaging moments in your long-form content and turn them into compelling short clips — ready to post.</p>
-            <ul className="featureList">
-              {[
-                ['Engaging captions', 'Hand-written or AI-assisted captions that hook viewers in the first 3 seconds.'],
-                ['Automated captions', 'Word-by-word animated subtitles synced perfectly to speech.'],
-                ['8 clips per month', '2 short-form clips per episode, maximizing your content\'s reach.'],
-                ['Vertical-first formatting', 'Every clip cropped and composed for mobile-first viewing.'],
-                ['Cross-platform ready', 'Each clip delivered for IG, TikTok, YouTube Shorts, and LinkedIn.'],
-              ].map(([title, desc]) => (
-                <li key={title}>
-                  <div className="featureCheck">✓</div>
-                  <span><strong>{title}</strong> — {desc}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="reelsVisual">
-            {[
-              { bg: 'linear-gradient(180deg,#1a1a2e,#16213e)', text: '"The biggest mistake podcasters make is..."', num: '#1' },
-              { bg: 'linear-gradient(180deg,#0d1117,#1a1a1a)', text: '"3 things that changed everything for us"', num: '#2', offset: true },
-              { bg: 'linear-gradient(180deg,#16213e,#0f3460)', text: '"No one talks about this but it\'s crucial..."', num: '#3' },
-              { bg: 'linear-gradient(180deg,#1a0a0a,#2d1515)', text: '"How we grew from 0 to 10K in 3 months"', num: '#4', offset: true },
-            ].map((r) => (
-              <div key={r.num} className="reelPhone" style={r.offset ? { transform: 'translateY(-20px)' } : {}}>
-                <div className="reelThumb" style={{ background: r.bg }}>
-                  <div className="reelCaptionBar">{r.text}</div>
-                </div>
-                <div className="reelNum">{r.num}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* REVISION BANNER */}
-      <div className="revisionBanner">
-        <div>
-          <h2>2–3 Reasonable Revisions.<br />Fast turnaround. Every time.</h2>
-          <p>We deliver on time and refine until you&apos;re satisfied — because your show&apos;s quality is our reputation too.</p>
-        </div>
-        <a href="#contact" className="btnDark">Talk to us →</a>
-      </div>
-
-      {/* PRICING — comes before portfolio */}
+      {/* 1. PRICING */}
       <section id="pricing" className="section sectionGray">
         <div className="sectionTag">Pricing</div>
         <h2 className="sectionTitle">Monthly Podcast Editing<br />Packages</h2>
@@ -152,9 +57,65 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PORTFOLIO — comes after pricing */}
+      {/* 2. PORTFOLIO */}
       <Portfolio />
 
+      {/* 3. PLATFORMS */}
+      <section id="platforms" className="section" style={{ background: 'var(--gray)' }}>
+        <div className="sectionTag">Distribution</div>
+        <h2 className="sectionTitle">Optimized for every platform</h2>
+        <p className="sectionSub">One recording, four fully-optimized cuts. Each platform gets the right format, aspect ratio, and length.</p>
+        <div className="platformGrid">
+          {[
+            { icon: '📺', name: 'YouTube', desc: 'Full-length 16:9 export, chapters, cards, end screens, and SEO-optimized scheduling.', spec: '16:9 · Long-form', bg: 'rgba(255,0,0,0.1)' },
+            { icon: '📸', name: 'Instagram', desc: 'Reels and feed-optimized clips with captions in 9:16 vertical format for maximum reach.', spec: '9:16 · Reels', bg: 'rgba(225,48,108,0.1)' },
+            { icon: '💼', name: 'LinkedIn', desc: 'Professional square or vertical clips with topic-driven captions suited for B2B audiences.', spec: '1:1 or 9:16 · Pro', bg: 'rgba(10,102,194,0.1)' },
+            { icon: '👥', name: 'Facebook', desc: 'Horizontal or square clips formatted for Facebook Watch and feed with auto-captions.', spec: '16:9 or 1:1 · Feed', bg: 'rgba(24,119,242,0.1)' },
+          ].map((p) => (
+            <div key={p.name} className="platformCard">
+              <div className="platformIconWrap" style={{ background: p.bg }}>{p.icon}</div>
+              <h3>{p.name}</h3>
+              <p>{p.desc}</p>
+              <span className="platformSpec">{p.spec}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 4. SERVICES */}
+      <section id="services" className="section sectionGray">
+        <div className="sectionTag">What&apos;s Included</div>
+        <h2 className="sectionTitle">Every service you need<br />in one package</h2>
+        <p className="sectionSub">From raw recording to polished, publish-ready content — we handle every step of the post-production pipeline.</p>
+        <div className="servicesGrid">
+          {[
+            { icon: '🎬', title: 'Multi-Camera Editing', desc: 'Seamless cuts between multiple camera angles, synced and color-graded for a professional broadcast look.', tag: 'Video', bg: 'rgba(124,58,237,0.15)' },
+            { icon: '🎙', title: 'Audio Editing & Cleaning', desc: 'Noise removal, EQ, compression, and de-essing. Basic audio balancing between hosts and guests.', tag: 'Audio', bg: 'rgba(185,127,255,0.12)' },
+            { icon: '✂️', title: 'Smart Cutting', desc: 'Removal of filler words, long pauses, "ums", "uhs", and unnecessary tangents — keeping your show tight and engaging.', tag: 'Efficiency', bg: 'rgba(124,58,237,0.15)' },
+            { icon: '🖼', title: 'AI-Powered Thumbnails', desc: 'Eye-catching thumbnails generated and refined using AI tools, optimized for click-through rate on YouTube.', tag: 'AI', bg: 'rgba(185,127,255,0.12)' },
+            { icon: '📅', title: 'YouTube Scheduling', desc: 'We upload and schedule your video on YouTube with optimized titles, descriptions, tags, and chapters.', tag: 'Distribution', bg: 'rgba(124,58,237,0.15)' },
+            { icon: '🎨', title: 'Custom Templates & Lower Thirds', desc: "Branded animated lower thirds and intro/outro templates tailored to your show's identity.", tag: 'Branding', bg: 'rgba(185,127,255,0.12)' },
+          ].map((s) => (
+            <div key={s.title} className="serviceCard">
+              <div className="serviceIcon" style={{ background: s.bg }}>{s.icon}</div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+              <span className="serviceTag">{s.tag}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* REVISION BANNER */}
+      <div className="revisionBanner">
+        <div>
+          <h2>2–3 Reasonable Revisions.<br />Fast turnaround. Every time.</h2>
+          <p>We deliver on time and refine until you&apos;re satisfied — because your show&apos;s quality is our reputation too.</p>
+        </div>
+        <a href="#contact" className="btnDark">Talk to us →</a>
+      </div>
+
+      {/* FAQ */}
       <FAQ />
 
       {/* CTA */}
@@ -172,9 +133,10 @@ export default function Home() {
         <a href="#" className="footerLogo">Kwento<span>Pod</span></a>
         <p>© 2025 KwentoPod. All rights reserved.</p>
         <div className="footerLinks">
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
           <a href="#pricing">Pricing</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#platforms">Platforms</a>
+          <a href="#services">Services</a>
           <a href="#contact">Contact</a>
         </div>
       </footer>
