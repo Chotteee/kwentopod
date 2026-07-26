@@ -34,7 +34,7 @@ export default function Home() {
       </section>
 
       {/* PLATFORMS */}
-      <section id="platforms" className="section sectionGray" style={{ background: 'var(--gray)' }}>
+      <section id="platforms" className="section" style={{ background: 'var(--gray)' }}>
         <div className="sectionTag">Distribution</div>
         <h2 className="sectionTitle">Optimized for every platform</h2>
         <p className="sectionSub">One recording, four fully-optimized cuts. Each platform gets the right format, aspect ratio, and length.</p>
@@ -104,10 +104,7 @@ export default function Home() {
         <a href="#contact" className="btnDark">Talk to us →</a>
       </div>
 
-      {/* PORTFOLIO */}
-      <Portfolio />
-
-      {/* PRICING */}
+      {/* PRICING — comes before portfolio */}
       <section id="pricing" className="section sectionGray">
         <div className="sectionTag">Pricing</div>
         <h2 className="sectionTitle">Monthly Podcast Editing<br />Packages</h2>
@@ -154,6 +151,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* PORTFOLIO — comes after pricing */}
+      <Portfolio />
 
       <FAQ />
 
