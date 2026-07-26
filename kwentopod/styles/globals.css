@@ -324,3 +324,36 @@ body {
 }
 
 @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+
+
+
+/* ADD THESE AT THE BOTTOM OF globals.css */
+
+/* Center all section headers */
+.sectionTag,
+.sectionTitle,
+.sectionSub {
+  text-align: center;
+}
+
+.sectionSub {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center pricing grid */
+.pricingGrid {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center portfolio header */
+#portfolio .sectionTag,
+#portfolio .sectionTitle,
+#portfolio .sectionSub {
+  text-align: center;
+}
+
+
