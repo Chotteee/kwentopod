@@ -1,34 +1,57 @@
 export default function Hero() {
   return (
-    <section className="hero">
-      <div>
-        <div className="heroBadge"><span>●</span> Now accepting new clients</div>
+    <section style={{
+      minHeight: '100vh',
+      padding: '10rem 4rem 6rem',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      position: 'relative',
+      overflow: 'hidden',
+    }}>
+      {/* Background glow */}
+      <div style={{
+        position: 'absolute', top: '-200px', left: '50%',
+        transform: 'translateX(-50%)',
+        width: '700px', height: '700px',
+        background: 'radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%)',
+        pointerEvents: 'none',
+      }} />
+
+      {/* TOP — Centered tagline */}
+      <div style={{ textAlign: 'center', maxWidth: '780px', width: '100%', position: 'relative', zIndex: 1 }}>
+        <div className="heroBadge" style={{ justifyContent: 'center' }}>
+          <span>●</span> Now accepting new clients
+        </div>
         <h1 className="heroTitle">Your Podcast.<br /><em>Edited.</em> Everywhere.</h1>
-        <p className="heroSub">Professional podcast video editing built for creators — multi-cam cuts, clean audio, AI thumbnails, and content repurposed for every major platform.</p>
-        <div className="heroActions">
+        <p className="heroSub" style={{ margin: '0 auto 2.5rem' }}>
+          Professional podcast video editing built for creators — multi-cam cuts, clean audio, AI thumbnails, and content repurposed for every major platform.
+        </p>
+        <div className="heroActions" style={{ justifyContent: 'center' }}>
           <a href="#contact" className="btnPrimary">Start Your Project →</a>
           <a href="#services" className="btnGhost">See what&apos;s included ↓</a>
         </div>
-        <div className="whitelistBadge">
+        <div className="whitelistBadge" style={{ justifyContent: 'center', margin: '1.25rem auto 0' }}>
           <span>✅</span> Whitelisted Video Editor for Video Podcasts
         </div>
-        <div className="heroStats">
-          <div>
+        <div className="heroStats" style={{ justifyContent: 'center' }}>
+          <div style={{ textAlign: 'center' }}>
             <div className="statNum">8</div>
             <div className="statLabel">Short-form clips/month</div>
           </div>
-          <div>
+          <div style={{ textAlign: 'center' }}>
             <div className="statNum">4</div>
             <div className="statLabel">Episodes/month</div>
           </div>
-          <div>
+          <div style={{ textAlign: 'center' }}>
             <div className="statNum">4</div>
             <div className="statLabel">Platforms optimized</div>
           </div>
         </div>
       </div>
 
-      <div className="heroVisual">
+      {/* BOTTOM — Premiere Pro Mock */}
+      <div style={{ width: '100%', maxWidth: '960px', marginTop: '4rem', position: 'relative', zIndex: 1 }}>
         <div className="premiereWindow">
           <div className="winTitlebar">
             <div className="winTitlebarLeft">
