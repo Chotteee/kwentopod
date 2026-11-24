@@ -1,8 +1,8 @@
-import '../styles/globals.css'
+import './globals.css'
 
 export const metadata = {
   title: 'KwentoPod — Professional Podcast Video Editing',
-  description: 'Professional podcast video editing built for creators — multi-cam cuts, clean audio, AI thumbnails, and content repurposed for every major platform.',
+  description: 'Professional podcast video editing built for creators. Multi-cam cuts, short-form reels, 4 platforms optimized.',
 }
 
 export default function RootLayout({ children }) {
