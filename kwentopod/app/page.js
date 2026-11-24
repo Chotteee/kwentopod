@@ -1,10 +1,12 @@
 'use client'
+import Nav from '../components/Nav'
+import Hero from '../components/Hero'
 
 export default function Home() {
   return (
-    <main>
-      <h1>KwentoPod</h1>
-      <p>Coming soon</p>
-    </main>
+    <>
+      <Nav />
+      <Hero />
+    </>
   )
 }
