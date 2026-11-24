@@ -123,8 +123,8 @@ export default function Home() {
         <div className="sectionTag">Let&apos;s Work Together</div>
         <h2>Ready to grow your<br />podcast brand?</h2>
         <p>Send us a message and we&apos;ll get back to you within 24 hours.</p>
-        <a href="mailto:hello@kwentopod.com" className="btnPrimary" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
-          hello@kwentopod.com →
+        <a href="mailto:kwentopod@gmail.com" className="btnPrimary" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
+          kwentopod@gmail.com →
         </a>
       </section>
 
