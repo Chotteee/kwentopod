@@ -66,19 +66,30 @@ export default function Home() {
         <h2 className="sectionTitle">Optimized for every platform</h2>
         <p className="sectionSub">One recording, four fully-optimized cuts. Each platform gets the right format, aspect ratio, and length.</p>
         <div className="platformGrid">
-          {[
-            { icon: '📺', name: 'YouTube', desc: 'Full-length 16:9 export, chapters, cards, end screens, and SEO-optimized scheduling.', spec: '16:9 · Long-form', bg: 'rgba(255,0,0,0.1)' },
-            { icon: '📸', name: 'Instagram', desc: 'Reels and feed-optimized clips with captions in 9:16 vertical format for maximum reach.', spec: '9:16 · Reels', bg: 'rgba(225,48,108,0.1)' },
-            { icon: '💼', name: 'LinkedIn', desc: 'Professional square or vertical clips with topic-driven captions suited for B2B audiences.', spec: '1:1 or 9:16 · Pro', bg: 'rgba(10,102,194,0.1)' },
-            { icon: '👥', name: 'Facebook', desc: 'Horizontal or square clips formatted for Facebook Watch and feed with auto-captions.', spec: '16:9 or 1:1 · Feed', bg: 'rgba(24,119,242,0.1)' },
-          ].map((p) => (
-            <div key={p.name} className="platformCard">
-              <div className="platformIconWrap" style={{ background: p.bg }}>{p.icon}</div>
-              <h3>{p.name}</h3>
-              <p>{p.desc}</p>
-              <span className="platformSpec">{p.spec}</span>
-            </div>
-          ))}
+          <div className="platformCard">
+            <div className="platformIconWrap" style={{ background: 'rgba(255,0,0,0.1)' }}>📺</div>
+            <h3>YouTube</h3>
+            <p>Full-length 16:9 export, chapters, cards, end screens, and SEO-optimized scheduling.</p>
+            <span className="platformSpec">16:9 · Long-form</span>
+          </div>
+          <div className="platformCard">
+            <div className="platformIconWrap" style={{ background: 'rgba(225,48,108,0.1)' }}>📸</div>
+            <h3>Instagram</h3>
+            <p>Reels and feed-optimized clips with captions in 9:16 vertical format for maximum reach.</p>
+            <span className="platformSpec">9:16 · Reels</span>
+          </div>
+          <div className="platformCard">
+            <div className="platformIconWrap" style={{ background: 'rgba(10,102,194,0.1)' }}>💼</div>
+            <h3>LinkedIn</h3>
+            <p>Professional square or vertical clips with topic-driven captions suited for B2B audiences.</p>
+            <span className="platformSpec">1:1 or 9:16 · Pro</span>
+          </div>
+          <div className="platformCard">
+            <div className="platformIconWrap" style={{ background: 'rgba(24,119,242,0.1)' }}>👥</div>
+            <h3>Facebook</h3>
+            <p>Horizontal or square clips formatted for Facebook Watch and feed with auto-captions.</p>
+            <span className="platformSpec">16:9 or 1:1 · Feed</span>
+          </div>
         </div>
       </section>
 
@@ -88,21 +99,42 @@ export default function Home() {
         <h2 className="sectionTitle">Every service you need<br />in one package</h2>
         <p className="sectionSub">From raw recording to polished, publish-ready content — we handle every step of the post-production pipeline.</p>
         <div className="servicesGrid">
-          {[
-            { icon: '🎬', title: 'Multi-Camera Editing', desc: 'Seamless cuts between multiple camera angles, synced and color-graded for a professional broadcast look.', tag: 'Video', bg: 'rgba(124,58,237,0.15)' },
-            { icon: '🎙', title: 'Audio Editing & Cleaning', desc: 'Noise removal, EQ, compression, and de-essing. Basic audio balancing between hosts and guests.', tag: 'Audio', bg: 'rgba(185,127,255,0.12)' },
-            { icon: '✂️', title: 'Smart Cutting', desc: 'Removal of filler words, long pauses, "ums", "uhs", and unnecessary tangents — keeping your show tight and engaging.', tag: 'Efficiency', bg: 'rgba(124,58,237,0.15)' },
-            { icon: '🖼', title: 'AI-Powered Thumbnails', desc: 'Eye-catching thumbnails generated and refined using AI tools, optimized for click-through rate on YouTube.', tag: 'AI', bg: 'rgba(185,127,255,0.12)' },
-            { icon: '📅', title: 'YouTube Scheduling', desc: 'We upload and schedule your video on YouTube with optimized titles, descriptions, tags, and chapters.', tag: 'Distribution', bg: 'rgba(124,58,237,0.15)' },
-            { icon: '🎨', title: 'Custom Templates & Lower Thirds', desc: "Branded animated lower thirds and intro/outro templates tailored to your show's identity.", tag: 'Branding', bg: 'rgba(185,127,255,0.12)' },
-          ].map((s) => (
-            <div key={s.title} className="serviceCard">
-              <div className="serviceIcon" style={{ background: s.bg }}>{s.icon}</div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
-              <span className="serviceTag">{s.tag}</span>
-            </div>
-          ))}
+          <div className="serviceCard">
+            <div className="serviceIcon" style={{ background: 'rgba(124,58,237,0.15)' }}>🎬</div>
+            <h3>Multi-Camera Editing</h3>
+            <p>Seamless cuts between multiple camera angles, synced and color-graded for a professional broadcast look.</p>
+            <span className="serviceTag">Video</span>
+          </div>
+          <div className="serviceCard">
+            <div className="serviceIcon" style={{ background: 'rgba(185,127,255,0.12)' }}>🎙</div>
+            <h3>Audio Editing &amp; Cleaning</h3>
+            <p>Noise removal, EQ, compression, and de-essing. Basic audio balancing between hosts and guests.</p>
+            <span className="serviceTag">Audio</span>
+          </div>
+          <div className="serviceCard">
+            <div className="serviceIcon" style={{ background: 'rgba(124,58,237,0.15)' }}>✂️</div>
+            <h3>Smart Cutting</h3>
+            <p>Removal of filler words, long pauses, and unnecessary tangents — keeping your show tight and engaging.</p>
+            <span className="serviceTag">Efficiency</span>
+          </div>
+          <div className="serviceCard">
+            <div className="serviceIcon" style={{ background: 'rgba(185,127,255,0.12)' }}>🖼</div>
+            <h3>AI-Powered Thumbnails</h3>
+            <p>Eye-catching thumbnails generated and refined using AI tools, optimized for click-through rate on YouTube.</p>
+            <span className="serviceTag">AI</span>
+          </div>
+          <div className="serviceCard">
+            <div className="serviceIcon" style={{ background: 'rgba(124,58,237,0.15)' }}>📅</div>
+            <h3>YouTube Scheduling</h3>
+            <p>We upload and schedule your video on YouTube with optimized titles, descriptions, tags, and chapters.</p>
+            <span className="serviceTag">Distribution</span>
+          </div>
+          <div className="serviceCard">
+            <div className="serviceIcon" style={{ background: 'rgba(185,127,255,0.12)' }}>🎨</div>
+            <h3>Custom Templates &amp; Lower Thirds</h3>
+            <p>Branded animated lower thirds and intro/outro templates tailored to your show&apos;s identity.</p>
+            <span className="serviceTag">Branding</span>
+          </div>
         </div>
       </section>
 
