@@ -1,5 +1,7 @@
 import Nav from '../components/Nav'
 import Hero from '../components/Hero'
+import Portfolio from '../components/Portfolio'
+import FAQ from '../components/FAQ'
 
 export default function Home() {
   return (
@@ -7,163 +9,135 @@ export default function Home() {
       <Nav />
       <Hero />
 
-      <section id="pricing" className="section">
+      {/* 1. PRICING */}
+      <section id="pricing" className="section sectionGray">
         <div className="sectionTag">Pricing</div>
-        <h2 className="sectionTitle">Simple, Transparent Pricing</h2>
-        <p className="sectionSub">One plan, everything included. No surprises.</p>
+        <h2 className="sectionTitle">Monthly Podcast Editing<br />Packages</h2>
+        <p className="sectionSub">No hidden fees. No surprise charges. Pick the plan that fits your setup.</p>
         <div className="pricingGrid">
-          <div className="pricingCard pricingCardFeatured">
-            <div className="featuredBadge">Most Popular</div>
-            <h3>Monthly Retainer</h3>
-            <p className="pricingSubtitle">Full-service podcast editing</p>
-            <div className="pricingPrice">$497<span>/mo</span></div>
+          <div className="pricingCard">
+            <h3>Single Angle</h3>
+            <p className="pricingSubtitle">Perfect for solo or remote podcasters</p>
+            <div className="pricingPrice">$500<span>/month</span></div>
+            <p className="pricingNote">4 episodes · billed monthly</p>
+            <div className="pricingBadge pricingBadgeSpeed">⚡ 24hr Turnaround</div>
             <div className="pricingDivider"></div>
             <ul className="pricingList">
-              <li>4 full podcast episodes/month</li>
-              <li>8 short-form clips/month</li>
-              <li>Multi-cam editing</li>
-              <li>4 platforms optimized</li>
-              <li className="pricingListHighlight">2 revision rounds included</li>
-              <li className="pricingListHighlight">48-hour turnaround</li>
+              <li className="pricingListHighlight">4 Episodes (30 min – 1 hour each)</li>
+              <li className="pricingListHighlight">8 Short-form Clips (30 seconds)</li>
+              <li>Single Angle Editing</li>
+              <li>Audio Enhancement</li>
+              <li>Smart Cutting</li>
+              <li>Color Correction</li>
+              <li>Lower Thirds</li>
+              <li>2–3 Reasonable Revisions</li>
             </ul>
-            <a href="mailto:kwentopod@gmail.com" className="pricingCta pricingCtaFilled">Get Started →</a>
+            <a href="#contact" className="pricingCta pricingCtaOutline">Get Started</a>
+          </div>
+          <div className="pricingCard pricingCardFeatured">
+            <div className="featuredBadge">Most Popular</div>
+            <h3>Multi-Cam Editing</h3>
+            <p className="pricingSubtitle">For professional in-studio productions</p>
+            <div className="pricingPrice">$650<span>/month</span></div>
+            <p className="pricingNote">4 episodes · billed monthly</p>
+            <div className="pricingBadge pricingBadgePro">🎬 24–48hr Turnaround</div>
+            <div className="pricingDivider"></div>
+            <ul className="pricingList">
+              <li className="pricingListHighlight">4 Episodes (30 min – 1 hour each)</li>
+              <li className="pricingListHighlight">8 Short-form Clips (30–45 seconds)</li>
+              <li>Multi-Camera Editing</li>
+              <li>Audio Enhancement</li>
+              <li>Smart Cutting</li>
+              <li>Color Correction</li>
+              <li>Lower Thirds</li>
+              <li>2–3 Reasonable Revisions</li>
+            </ul>
+            <a href="#contact" className="pricingCta pricingCtaFilled">Get Started</a>
           </div>
         </div>
       </section>
 
-      <section id="portfolio" className="section sectionGray">
-        <div className="sectionTag">Our Work</div>
-        <h2 className="sectionTitle">Sample Videos</h2>
-        <p className="sectionSub">See our editing in action — click any video to watch on YouTube.</p>
-        <div style={{background:'rgba(185,127,255,0.06)',border:'1px solid rgba(185,127,255,0.2)',borderRadius:'12px',padding:'1.25rem 1.75rem',marginBottom:'2rem',maxWidth:'800px',marginLeft:'auto',marginRight:'auto',display:'flex',alignItems:'flex-start',gap:'0.75rem'}}>
-          <span style={{fontSize:'1.2rem',flexShrink:0}}>🔒</span>
-          <p style={{fontSize:'1rem',color:'var(--muted)',lineHeight:1.7}}>
-            <strong style={{color:'var(--white)'}}>Client Confidentiality Notice:</strong>{' '}
-            Due to client confidentiality, some portfolio samples cannot be displayed publicly.
-            I would be happy to share additional work during a{' '}
-            <a href="mailto:kwentopod@gmail.com" style={{color:'var(--accent)',textDecoration:'none'}}>Zoom call</a>.
-          </p>
-        </div>
-        <div className="longformGrid">
-          <a href="https://youtu.be/d0u0zwaBZEY" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}}>
-            <div className="videoCard" style={{cursor:'pointer'}}>
-              <div style={{position:'relative',width:'100%',paddingBottom:'56.25%',background:'#111',overflow:'hidden'}}>
-                <img src="https://img.youtube.com/vi/d0u0zwaBZEY/maxresdefault.jpg" alt="Episode Sample 1" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',objectFit:'cover'}} />
-                <div style={{position:'absolute',top:0,left:0,right:0,bottom:0,background:'rgba(0,0,0,0.35)',display:'flex',alignItems:'center',justifyContent:'center'}}>
-                  <div style={{width:60,height:60,background:'rgba(124,58,237,0.95)',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'1.5rem'}}>▶</div>
-                </div>
-              </div>
-              <div className="videoInfo">
-                <div className="videoTypeBadge badgeLong">Long-form · Full Episode</div>
-                <h4>Episode Sample 1</h4>
-                <p>Full podcast episode · Long-form</p>
-              </div>
-            </div>
-          </a>
-          <a href="https://youtu.be/fAtYTZzXcKQ" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}}>
-            <div className="videoCard" style={{cursor:'pointer'}}>
-              <div style={{position:'relative',width:'100%',paddingBottom:'56.25%',background:'#111',overflow:'hidden'}}>
-                <img src="https://img.youtube.com/vi/fAtYTZzXcKQ/maxresdefault.jpg" alt="Episode Sample 2" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',objectFit:'cover'}} />
-                <div style={{position:'absolute',top:0,left:0,right:0,bottom:0,background:'rgba(0,0,0,0.35)',display:'flex',alignItems:'center',justifyContent:'center'}}>
-                  <div style={{width:60,height:60,background:'rgba(124,58,237,0.95)',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'1.5rem'}}>▶</div>
-                </div>
-              </div>
-              <div className="videoInfo">
-                <div className="videoTypeBadge badgeLong">Long-form · Full Episode</div>
-                <h4>Episode Sample 2</h4>
-                <p>Full podcast episode · Long-form</p>
-              </div>
-            </div>
-          </a>
-          <a href="https://youtu.be/5Ns1g_jJ_4M" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}}>
-            <div className="videoCard" style={{cursor:'pointer'}}>
-              <div style={{position:'relative',width:'100%',paddingBottom:'56.25%',background:'#111',overflow:'hidden'}}>
-                <img src="https://img.youtube.com/vi/5Ns1g_jJ_4M/maxresdefault.jpg" alt="Episode Sample 3" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',objectFit:'cover'}} />
-                <div style={{position:'absolute',top:0,left:0,right:0,bottom:0,background:'rgba(0,0,0,0.35)',display:'flex',alignItems:'center',justifyContent:'center'}}>
-                  <div style={{width:60,height:60,background:'rgba(124,58,237,0.95)',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'1.5rem'}}>▶</div>
-                </div>
-              </div>
-              <div className="videoInfo">
-                <div className="videoTypeBadge badgeLong">Long-form · Full Episode</div>
-                <h4>Episode Sample 3</h4>
-                <p>Full podcast episode · Long-form</p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
+      {/* 2. PORTFOLIO */}
+      <Portfolio />
 
-      <section id="platforms" className="section">
+      {/* 3. PLATFORMS */}
+      <section id="platforms" className="section" style={{ background: 'var(--gray)' }}>
         <div className="sectionTag">Distribution</div>
-        <h2 className="sectionTitle">4 Platforms. One Edit.</h2>
-        <p className="sectionSub">We optimize your content for every major platform so you don't have to.</p>
+        <h2 className="sectionTitle">Optimized for every platform</h2>
+        <p className="sectionSub">One recording, four fully-optimized cuts. Each platform gets the right format, aspect ratio, and length.</p>
         <div className="platformGrid">
-          <div className="platformCard"><div className="platformIconWrap" style={{background:'rgba(255,0,0,0.1)'}}>▶</div><h3>YouTube</h3><p>Long-form + Shorts optimized</p></div>
-          <div className="platformCard"><div className="platformIconWrap" style={{background:'rgba(0,0,0,0.3)'}}>🎵</div><h3>TikTok</h3><p>Vertical reels with captions</p></div>
-          <div className="platformCard"><div className="platformIconWrap" style={{background:'rgba(225,48,108,0.1)'}}>📸</div><h3>Instagram</h3><p>Reels + feed posts</p></div>
-          <div className="platformCard"><div className="platformIconWrap" style={{background:'rgba(30,215,96,0.1)'}}>🎙</div><h3>Spotify</h3><p>Podcast audio mastered</p></div>
+          {[
+            { icon: '📺', name: 'YouTube', desc: 'Full-length 16:9 export, chapters, cards, end screens, and SEO-optimized scheduling.', spec: '16:9 · Long-form', bg: 'rgba(255,0,0,0.1)' },
+            { icon: '📸', name: 'Instagram', desc: 'Reels and feed-optimized clips with captions in 9:16 vertical format for maximum reach.', spec: '9:16 · Reels', bg: 'rgba(225,48,108,0.1)' },
+            { icon: '💼', name: 'LinkedIn', desc: 'Professional square or vertical clips with topic-driven captions suited for B2B audiences.', spec: '1:1 or 9:16 · Pro', bg: 'rgba(10,102,194,0.1)' },
+            { icon: '👥', name: 'Facebook', desc: 'Horizontal or square clips formatted for Facebook Watch and feed with auto-captions.', spec: '16:9 or 1:1 · Feed', bg: 'rgba(24,119,242,0.1)' },
+          ].map((p) => (
+            <div key={p.name} className="platformCard">
+              <div className="platformIconWrap" style={{ background: p.bg }}>{p.icon}</div>
+              <h3>{p.name}</h3>
+              <p>{p.desc}</p>
+              <span className="platformSpec">{p.spec}</span>
+            </div>
+          ))}
         </div>
       </section>
 
+      {/* 4. SERVICES */}
       <section id="services" className="section sectionGray">
-        <div className="sectionTag">What's Included</div>
-        <h2 className="sectionTitle">Everything You Need</h2>
-        <p className="sectionSub">Full-service podcast video editing from raw footage to published content.</p>
+        <div className="sectionTag">What&apos;s Included</div>
+        <h2 className="sectionTitle">Every service you need<br />in one package</h2>
+        <p className="sectionSub">From raw recording to polished, publish-ready content — we handle every step of the post-production pipeline.</p>
         <div className="servicesGrid">
-          <div className="serviceCard"><div className="serviceIcon" style={{background:'rgba(124,58,237,0.15)'}}>🎬</div><h3>Multi-Cam Editing</h3><p>Seamless cuts between multiple camera angles for a professional broadcast look.</p></div>
-          <div className="serviceCard"><div className="serviceIcon" style={{background:'rgba(185,127,255,0.1)'}}>📱</div><h3>Short-Form Reels</h3><p>Viral-ready clips optimized for TikTok, Instagram Reels, and YouTube Shorts.</p></div>
-          <div className="serviceCard"><div className="serviceIcon" style={{background:'rgba(124,58,237,0.15)'}}>🎨</div><h3>Motion Graphics</h3><p>Custom lower thirds, transitions, and branded graphics for your show.</p></div>
-          <div className="serviceCard"><div className="serviceIcon" style={{background:'rgba(185,127,255,0.1)'}}>🔊</div><h3>Audio Enhancement</h3><p>Noise removal, leveling, and mastering for crystal-clear podcast audio.</p></div>
+          {[
+            { icon: '🎬', title: 'Multi-Camera Editing', desc: 'Seamless cuts between multiple camera angles, synced and color-graded for a professional broadcast look.', tag: 'Video', bg: 'rgba(124,58,237,0.15)' },
+            { icon: '🎙', title: 'Audio Editing & Cleaning', desc: 'Noise removal, EQ, compression, and de-essing. Basic audio balancing between hosts and guests.', tag: 'Audio', bg: 'rgba(185,127,255,0.12)' },
+            { icon: '✂️', title: 'Smart Cutting', desc: 'Removal of filler words, long pauses, "ums", "uhs", and unnecessary tangents — keeping your show tight and engaging.', tag: 'Efficiency', bg: 'rgba(124,58,237,0.15)' },
+            { icon: '🖼', title: 'AI-Powered Thumbnails', desc: 'Eye-catching thumbnails generated and refined using AI tools, optimized for click-through rate on YouTube.', tag: 'AI', bg: 'rgba(185,127,255,0.12)' },
+            { icon: '📅', title: 'YouTube Scheduling', desc: 'We upload and schedule your video on YouTube with optimized titles, descriptions, tags, and chapters.', tag: 'Distribution', bg: 'rgba(124,58,237,0.15)' },
+            { icon: '🎨', title: 'Custom Templates & Lower Thirds', desc: "Branded animated lower thirds and intro/outro templates tailored to your show's identity.", tag: 'Branding', bg: 'rgba(185,127,255,0.12)' },
+          ].map((s) => (
+            <div key={s.title} className="serviceCard">
+              <div className="serviceIcon" style={{ background: s.bg }}>{s.icon}</div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+              <span className="serviceTag">{s.tag}</span>
+            </div>
+          ))}
         </div>
       </section>
 
+      {/* REVISION BANNER */}
       <div className="revisionBanner">
         <div>
-          <h2>2 Revision Rounds Included</h2>
-          <p>Every delivery comes with two rounds of revisions — no extra charge.</p>
+          <h2>2–3 Reasonable Revisions.<br />Fast turnaround. Every time.</h2>
+          <p>We deliver on time and refine until you&apos;re satisfied — because your show&apos;s quality is our reputation too.</p>
         </div>
-        <a href="mailto:kwentopod@gmail.com" className="btnDark">Get Started →</a>
+        <a href="#contact" className="btnDark">Talk to us →</a>
       </div>
 
-      <section id="faq" className="section">
-        <div className="sectionTag">FAQ</div>
-        <h2 className="sectionTitle">Common Questions</h2>
-        <div className="faqList">
-          <div className="faqItem">
-            <div className="faqQ">How long does editing take?<span className="faqToggle">+</span></div>
-            <div className="faqA">Typically 48 hours per episode after receiving your raw footage.</div>
-          </div>
-          <div className="faqItem">
-            <div className="faqQ">What formats do you accept?<span className="faqToggle">+</span></div>
-            <div className="faqA">We accept all major video formats: MP4, MOV, MXF, and more.</div>
-          </div>
-          <div className="faqItem">
-            <div className="faqQ">How many revisions are included?<span className="faqToggle">+</span></div>
-            <div className="faqA">Every project includes 2 rounds of revisions at no extra cost.</div>
-          </div>
-          <div className="faqItem">
-            <div className="faqQ">Do you sign NDAs?<span className="faqToggle">+</span></div>
-            <div className="faqA">Yes, we are happy to sign an NDA before viewing any client footage.</div>
-          </div>
-          <div className="faqItem">
-            <div className="faqQ">How do I send my footage?<span className="faqToggle">+</span></div>
-            <div className="faqA">We use Google Drive, Dropbox, or WeTransfer — whatever works best for you.</div>
-          </div>
-        </div>
+      {/* FAQ */}
+      <FAQ />
+
+      {/* CTA */}
+      <section id="contact" className="ctaSection">
+        <div className="sectionTag">Let&apos;s Work Together</div>
+        <h2>Ready to grow your<br />podcast brand?</h2>
+        <p>Send us a message and we&apos;ll get back to you within 24 hours.</p>
+        <a href="mailto:hello@kwentopod.com" className="btnPrimary" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
+          hello@kwentopod.com →
+        </a>
       </section>
 
-      <section className="ctaSection">
-        <div className="sectionTag">Get Started</div>
-        <h2>Ready to Grow Your Podcast?</h2>
-        <p>Let's talk about your show. Email us and we'll get back to you within 24 hours.</p>
-        <a href="mailto:kwentopod@gmail.com" className="btnPrimary" style={{fontSize:'1.1rem',padding:'1rem 2.5rem'}}>kwentopod@gmail.com →</a>
-      </section>
-
+      {/* FOOTER */}
       <footer className="footer">
-        <a href="/" className="footerLogo">Kwento<span>Pod</span></a>
+        <a href="#" className="footerLogo">Kwento<span>Pod</span></a>
         <p>© 2025 KwentoPod. All rights reserved.</p>
         <div className="footerLinks">
-          <a href="mailto:kwentopod@gmail.com">Email Us</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#platforms">Platforms</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
         </div>
       </footer>
     </>
